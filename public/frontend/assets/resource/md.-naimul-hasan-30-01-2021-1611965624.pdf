@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="HMagu4uekS7qGsVXVE0M7Uz0P70e98jLOI4f6Dak">
+
+    <title>NBYVirtualExpo</title>
+
+    <!-- Scripts -->
+
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link href="http://localhost:8000/css/app.css" rel="stylesheet">
+    <style>
+      #notify{
+        /* max-width:600px;
+        max-height:400px;
+        width:600px;
+        height:400px;
+        position:absolute;
+        left:0;
+        right:0;
+        top:15%;
+        translate:59%;
+        bottom:0;
+        background:#000;
+        opacity:0.4;
+        z-index:999999999999999; */
+      }
+
+      .notification_list{
+        top: 50%;
+        bottom: 50%;
+        width: 90%;
+        traslate: 50%;
+        translate: 6%;
+        left: 0%;
+        right: 0%;
+        opacity: 0.9;
+        height: 123px;
+        font-size: 3em;
+        z-index:999999999999999;
+        position:absolute;
+        cursor:pointer;
+      }
+
+
+
+
+    </style>
+
+</head>
+<body>
+<!-- <ul class="list-group"  id="notify">
+  <li class="list-group-item d-flex justify-content-between align-items-center notification_list" onclick="requestPermission()">
+    Pls click on bell icon for better service
+    <span class="badge badge-primary badge-pill"><i class="fa fa-bell" aria-hidden="true"></i></span>
+  </li>
+</ul> -->
+
+<div id="app_frontend">
+
+</div>
+
+<script  src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script  src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+<script  src="https://www.gstatic.com/firebasejs/7.21.1/firebase-messaging.js"></script>
+
+<script type="application/json" src="http://localhost:8000/manifest.json"></script>
+
+<script  src="http://localhost:8000/firebase/firebase-config.js"></script>
+
+<script src="http://localhost:8000/js/app_frontend.js"></script>
+
+<script>
+var now = Date.now();
+navigator.mediaDevices.getUserMedia({audio: true, video: false})
+.then(function(stream) {
+  console.log('Got stream, time diff :', Date.now() - now);
+})
+.catch(function(err) {
+  console.log('GUM failed with error, time diff: ', Date.now() - now);
+});
+
+
+</script>
+
+<!--Start of Tawk.to Script-->
+<!-- <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6007d33fa9a34e36b96e45a2/1esf92d27';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> -->
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
